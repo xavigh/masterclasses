@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>click demo jquery</title>
+  <style>
+
+  </style>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
+</head>
+<body>
+
+<button class="boton" style="background-color:#ff0000" type="button">Red</button>
+<button class="boton" style="background-color:#00ff00" type="button">blue</button>
+
+<p id="p_result"> Color del botón</p>
+
+<script>
+/*Modifica el color del texto de <p> con el color de fondo de botón pulsado: */
+$(document).ready(function(){
+
+      $(".boton").click(function() {
+        var str = $(this).text();
+        $("#p_result").html(str);
+        if(str == 'Red') $("#p_result").css("color", "#fc1111");
+        else if (str=='blue') $("#p_result").css("color", "#3262FF");
+      });
+
+});
+</script>
+
+</body>
+</html>
